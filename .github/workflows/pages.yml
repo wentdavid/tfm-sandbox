@@ -33,9 +33,9 @@ jobs:
       - name: Install deps
         run: npm ci
 
-      - name: Build (base=/tfm-sandbox/)
+      - name: Build (base=/<repo>/)
         env:
-          VITE_BASE: /tfm-sandbox/
+          VITE_BASE: /${{ github.event.repository.name }}/
         run: npm run build
 
       - name: Upload artifact
