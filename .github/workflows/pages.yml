@@ -2,7 +2,8 @@ name: Deploy to GitHub Pages (sandbox)
 
 on:
   push:
-    branches: [ sandbox ]
+    branches: [ sandbox, main ]
+  workflow_dispatch:
 
 permissions:
   contents: read
